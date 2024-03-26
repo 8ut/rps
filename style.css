@@ -17,14 +17,14 @@
     z-index: -1;
 }
 
-.choice{
+.choice {
     color: #fff;
     display: block;
     height: 300px;
     width: 100%;
 }
 
-.inner-choice{
+.inner-choice {
     display: flex;
     align-self: center;
     justify-content: space-evenly;
@@ -33,11 +33,11 @@
     padding-top: 50px;
 }
 
-.rps img{
+.rps img {
     height: 200px;
 }
 
-.shoot{
+.shoot {
     display: flex;
     align-self: center;
     justify-content: space-evenly;
@@ -46,7 +46,7 @@
     padding-bottom: 50px;
 }
 
-.shoot h3{
+.shoot h3 {
     display: flex;
     align-self: center;
     justify-content: space-evenly;
@@ -54,11 +54,11 @@
     margin: 0 auto;
 }
 
-.shoot img{
+.shoot img {
     height: 150px;
 }
 
-.computer{
+.computer {
     display: flex;
     align-self: center;
     justify-content: space-evenly;
@@ -67,7 +67,17 @@
     padding-bottom: 50px;
 }
 
-.computer img{
+.computer img {
     height: 180px;
 }
 
+.rps:hover img,
+.separate-image:hover img {
+    outline: 2px solid green;
+}
+
+/* Green outline when image is clicked */
+.rps.clicked img,
+.separate-image.clicked img {
+    outline: 5px solid green;
+}

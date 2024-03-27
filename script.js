@@ -1,11 +1,10 @@
-
-
-
 const rpsContainers = document.querySelectorAll('.rps');
 const separateImage = document.querySelector('.separate-image');
 
-rpsContainers.forEach(container => {
-    container.addEventListener('click', function() {
+let clickedElementNumber = null;
+
+rpsContainers.forEach((container, index) => {
+    container.addEventListener('click', function () {
         // Remove 'clicked' class from all image containers
         rpsContainers.forEach(container => {
             container.classList.remove('clicked');
@@ -16,6 +15,10 @@ rpsContainers.forEach(container => {
 
         // Highlight the separate image whenever any .rps element is clicked
         separateImage.classList.add('clicked');
+
+        // Assign a number to the clicked element using its index
+        clickedElementNumber = index; // Store the assigned number in the global variable
+        console.log('Number assigned to clicked element:', clickedElementNumber);
     });
 });
 
@@ -23,9 +26,13 @@ rpsContainers.forEach(container => {
 let player1 = 0;
 let player2 = getRandomInt(3);
 
+console.log(clickedElementNumber)
+
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
+
+
 
 
 console.log(player2);

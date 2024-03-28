@@ -1,5 +1,6 @@
 const rpsContainers = document.querySelectorAll('.rps');
 const separateImage = document.querySelector('.separate-image');
+let global = 777;
 
 let clickedElementNumber = null;
 
@@ -19,14 +20,27 @@ rpsContainers.forEach((container, index) => {
         // Assign a number to the clicked element using its index
         clickedElementNumber = index; // Store the assigned number in the global variable
         console.log('Number assigned to clicked element:', clickedElementNumber);
+
+        global = clickedElementNumber;
+        
     });
 });
 
 
-let player1 = 0;
-let player2 = getRandomInt(3);
+// Get the image element
+var image = document.getElementById('myImage');
 
-console.log(clickedElementNumber)
+// Add event listener to the image
+image.addEventListener('click', function() {
+    // Your event handling code here
+    alert('Image clicked!');
+    console.log(global)
+    
+});
+
+
+
+
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
@@ -35,23 +49,6 @@ function getRandomInt(max) {
 
 
 
-console.log(player2);
 
-if (player2 === 0) {
-    console.log("rock0")
-} else if (player2 === 1) {
-    console.log("paper1")
-} else {
-    console.log("scissors2")
-}
-
-
-if (player2 === player1) {
-    console.log("Tie")
-} else if (player1 === 0 && player2 === 2) {
-    console.log("You Win")
-} else if (player1 === 0 && player2 === 1) {
-    console.log("You Lose")
-}
 
 

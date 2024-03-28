@@ -33,8 +33,33 @@ var image = document.getElementById('myImage');
 // Add event listener to the image
 image.addEventListener('click', function() {
     // Your event handling code here
-    alert('Image clicked!');
     console.log(global)
+    let player1 = global;
+    let player2 = getRandomInt(3);
+
+    if (player2 === 0) {
+        console.log("rock0")
+    } else if (player2 === 1) {
+        console.log("scissors1")
+    } else {
+        console.log("paper2")
+    }
+
+
+    if (player1 === 777){
+        alert('must pick an option above')
+    } else if(player2 === player1){
+        console.log("Tie")
+        //rock options
+    } else if (player1 === 0 && player2 === 2) {
+        console.log("You Win")
+    } else if (player1 === 0 && player2 === 1) {
+        console.log("You Lose")
+    }   //scissors
+    else if (player1 === 1 && player2 === 2){
+        console.log("Win");
+    }
+    
     
 });
 

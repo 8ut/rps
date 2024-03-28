@@ -52,14 +52,20 @@ image.addEventListener('click', function() {
         console.log("Tie")
         //rock options
     } else if (player1 === 0 && player2 === 2) {
-        console.log("You Win")
+        console.log("Win")
     } else if (player1 === 0 && player2 === 1) {
-        console.log("You Lose")
+        console.log("Lose")
     }   //scissors
     else if (player1 === 1 && player2 === 2){
         console.log("Win");
+    }else if(player1 === 1 && player2 === 0){
+        console.log("Lose")
+    }   //paper
+    else if(player1 === 2 && player2 === 0){
+        console.log("Win")
+    }else if(player1 ===2 && player2 === 1){
+        console.log("Lose")
     }
-    
     
 });
 

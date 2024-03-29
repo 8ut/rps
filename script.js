@@ -77,6 +77,8 @@ image.addEventListener('click', function() {
 
 //hello
 
+//logic is done, need to add score, replay, and add images to dom.
+
 
 
 

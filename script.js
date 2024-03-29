@@ -50,17 +50,23 @@ image.addEventListener('click', function() {
         alert('must pick an option above')
     } else if(player2 === player1){
         console.log("Tie")
-        //rock options
-    } else if (player1 === 0 && player2 === 2) {
+    } 
+
+    //rock
+    else if (player1 === 0 && player2 === 2) {
         console.log("Win")
     } else if (player1 === 0 && player2 === 1) {
         console.log("Lose")
-    }   //scissors
+    }   
+
+    //scissors
     else if (player1 === 1 && player2 === 2){
         console.log("Win");
     }else if(player1 === 1 && player2 === 0){
         console.log("Lose")
-    }   //paper
+    }   
+
+    //paper
     else if(player1 === 2 && player2 === 0){
         console.log("Win")
     }else if(player1 ===2 && player2 === 1){
@@ -68,6 +74,8 @@ image.addEventListener('click', function() {
     }
     
 });
+
+//hello
 
 
 
